@@ -1,0 +1,72 @@
+Basic Feature Extraction
+
+Features:
+freq_qid1 = Frequency of qid1's
+freq_qid2 = Frequency of qid2's
+q1len = Length of q1
+q2len = Length of q2
+q1_n_words = Number of words in Question 1
+q2_n_words = Number of words in Question 2
+word_Common = (Number of common unique words in Question 1 and Question 2)
+word_Total =(Total num of words in Question 1 + Total num of words in Question 2)
+word_share = (word_common)/(word_Total)
+freq_q1+freq_q2 = sum total of frequency of qid1 and qid2
+freq_q1-freq_q2 = absolute difference of frequency of qid1 and qid2 
+
+Advanced Feature Extraction (NLP and Fuzzy Features) 
+
+1. Token Features
+cwc_min = This is the ratio of the number of common words to the length of the smaller question
+cwc_max = This is the ratio of the number of common words to the length of the larger question
+csc_min = This is the ratio of the number of common stop words to the smaller stop word count among the two questions
+csc_max = This is the ratio of the number of common stop words to the larger stop word count among the two questions
+ctc_min = This is the ratio of the number of common tokens to the smaller token count among the two questions
+ctc_max = This is the ratio of the number of common tokens to the larger token count among the two questions
+last_word_eq = 1 if the last word in the two questions is same, 0 otherwise
+first_word_eq = 1 if the first word in the two questions is same, 0 otherwise
+
+2. Length Based Features
+mean_len = Mean of the length of the two questions (number of words)
+abs_len_diff = Absolute difference between the length of the two questions (number of words)
+longest_substr_ratio = Ratio of the length of the longest substring among the two questions to the length of the smaller question
+
+3. Fuzzy Features
+fuzz_ratio = fuzz_ratio score from fuzzywuzzy
+fuzz_partial_ratio = fuzz_partial_ratio from fuzzywuzzy
+token_sort_ratio = token_sort_ratio from fuzzywuzzy
+token_set_ratio = token_set_ratio from fuzzywuzzy
+
+Word2Vec
+
+We find TF-IDF scores, we convert each question to a weighted average of word2vec vectors by these scores.
+Here we use a pre-trained GLOVE model which comes free with "Spacy". https://spacy.io/usage/vectors-similarity
+It is trained on Wikipedia and therefore, it is stronger in terms of word semantics.\
+
+
+
+Machine Learning Models
+
+1. Logistic Regression with hyperparameter tuning
+For values of alpha =  0.1 The log loss is: 0.55
+2. Linear SVM with hyperparameter tuning 
+For values of alpha =  0.1 The log loss is: 0.53
+3. XGBoost 
+For values of alpha =  0.1 The log loss is: 0.441
+
+Log Loss Test: 	0.441
+Accuarcy Score Test: 	0.783
+
+
+Classification Report Test
+               precision    recall  f1-score   support
+
+           0       0.83      0.82      0.85     18824
+           1       0.75      0.74      0.75     11176
+
+    accuracy                           0.80     30000
+   macro avg       0.80      0.80      0.80     30000
+weighted avg       0.81      0.81      0.80     30000
+
+
+
+

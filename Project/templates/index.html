@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Quora Duplicate Question Prediction</title>
+ 
+</head>
+
+<body>
+    <div class="container">
+      <div class="row">
+        <div data-aos="fade-up" data-aos-delay="200" width="100%">
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <main id="main">
+
+    
+   <section id="portfolio" class="portfolio">
+
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2 style="color:red;"> Quora Duplicate Question Prediction</h2>
+          <p> Enter pair of questions | Click on predict | Wait for a sec for prediction </p>
+        </div>
+
+        <div>
+
+          <form id="inputQuestions" method="post" action="/predict">
+
+          <div class="form-group" style="border: 3px black solid;">
+            <label for="exampleFormControlTextarea1"><b>Enter Question 1: </b></label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="question1"></textarea>
+          </div>
+
+          <div class="form-group" style="border: 3px black solid;">
+            <label for="exampleFormControlTextarea1"><b>Enter Question 2:</b></label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="question2"></textarea>
+          </div>
+
+          <div>
+            <button type="button" class="btn btn-primary btn-lg " id="btn-predict">Predict</button>
+          </div>
+
+          </form>
+
+          <div class="loader" style="display:none;"></div>
+
+          <h3 id="result">
+            <span> </span>
+          </h3>
+
+        </div>
+      </div>
+   </section>
+    
+  </footer>
+
+  <a href="#" class="back-to-top"><i class="ri-arrow-up-line"></i></a>
+  <div id="preloader"></div>
+  
+</body>
+
+</html>

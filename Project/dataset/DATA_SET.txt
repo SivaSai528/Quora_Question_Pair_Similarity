@@ -1,0 +1,7 @@
+https://github.com/Koorimikiran369/Quora-Question-Pairing/blob/main/train.csv.zip
+
+Download Data set from this link
+
+and run one by one python file to create all the data sets used in programs
+
+if you dont want data sets just want to run and test model then there is no need to download
