@@ -39,12 +39,19 @@ Number of rows in Train.csv = 404,290
 
 **Approach of the Project**
 
-1.Preprocessing
-2.Token Based Features Extraction
-3.Length Based Features Extraction
-4.Fuzzy Features Extraction
-5.TFIDF 
-6.Word2Vec 
-7.XGBoost With Hyperparameter Tuning
-8.Logloss and Confusion Matrix
-9.Analysis with MLflows
+1. Preprocessing
+2. Token Based Features Extraction
+3. Length Based Features Extraction
+4. Fuzzy Features Extraction
+5. TFIDF
+6. Word2Vec
+7. XGBoost With Hyperparameter Tuning
+8. Logloss and Confusion Matrix
+9. Analysis with MLflows
+
+**Improvements Needs**
+
+1. Using Large Corpus Glove model instead of small en_core_web_sm
+2. Due to Hardware Problem we just train and run only 25% of total data which mean 1 lakh dataset we choose instead of 4 lakhs data
+3. You can try diffrent ML Algorithms  to get better results
+4. You can try Neural Networks and Deep Learning Algorithms instead of considering tdidf and word2vec
