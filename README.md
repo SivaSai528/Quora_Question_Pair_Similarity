@@ -39,11 +39,12 @@ Number of rows in Train.csv = 404,290
 
 **Approach of the Project**
 
-Token Based Features Extraction
-Length Based Features Extraction
-Fuzzy Features Extraction
-TFIDF 
-Word2Vec 
-XGBoost With Hyperparameter Tuning
-Logloss and Confusion Matrix
-Analysis with MLflows
+1.Preprocessing
+2.Token Based Features Extraction
+3.Length Based Features Extraction
+4.Fuzzy Features Extraction
+5.TFIDF 
+6.Word2Vec 
+7.XGBoost With Hyperparameter Tuning
+8.Logloss and Confusion Matrix
+9.Analysis with MLflows
